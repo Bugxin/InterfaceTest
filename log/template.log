@@ -1,0 +1,21 @@
+2019-06-28 00:21:32,605 - INFO - test_api[TestApi.py line:33] - ====== 测试开始 ======
+2019-06-28 00:21:32,827 - INFO - case_info[LogHandle.py line:69] - 测试用例: get查老黄历
+2019-06-28 00:21:32,827 - INFO - case_info[LogHandle.py line:70] - url：http://v.juhe.cn/laohuangli/d
+2019-06-28 00:21:32,828 - INFO - case_info[LogHandle.py line:71] - 请求参数：date=2014-09-11&key=cdb2bd69552af52c5a0a05dd7b61bd91
+2019-06-28 00:21:32,828 - INFO - case_info[LogHandle.py line:72] - 期望结果：error_code:0
+2019-06-28 00:21:32,828 - INFO - case_info[LogHandle.py line:73] - 实际结果：0
+2019-06-28 00:21:32,829 - INFO - test_api[TestApi.py line:63] - ====== 测试结束 ======
+2019-06-28 00:21:32,829 - INFO - test_api[TestApi.py line:33] - ====== 测试开始 ======
+2019-06-28 00:21:32,953 - INFO - case_info[LogHandle.py line:69] - 测试用例: post查老黄历
+2019-06-28 00:21:32,953 - INFO - case_info[LogHandle.py line:70] - url：http://v.juhe.cn/laohuangli/d
+2019-06-28 00:21:32,953 - INFO - case_info[LogHandle.py line:71] - 请求参数：{'date': '2014-09-11', 'key': 'cdb2bd69552af52c5a0a05dd7b61bd91'}
+2019-06-28 00:21:32,953 - INFO - case_info[LogHandle.py line:72] - 期望结果：error_code:0
+2019-06-28 00:21:32,954 - INFO - case_info[LogHandle.py line:73] - 实际结果：0
+2019-06-28 00:21:32,954 - INFO - test_api[TestApi.py line:63] - ====== 测试结束 ======
+2019-06-28 00:21:32,955 - INFO - test_api[TestApi.py line:33] - ====== 测试开始 ======
+2019-06-28 00:21:33,065 - INFO - case_info[LogHandle.py line:69] - 测试用例: post查老黄历失败
+2019-06-28 00:21:33,065 - INFO - case_info[LogHandle.py line:70] - url：http://v.juhe.cn/laohuangli/d
+2019-06-28 00:21:33,066 - INFO - case_info[LogHandle.py line:71] - 请求参数：{'date': '2014-09-11', 'key': 'cdb2bd69552af52c5a0a05dd7b61bd9'}
+2019-06-28 00:21:33,066 - INFO - case_info[LogHandle.py line:72] - 期望结果：error_code:0
+2019-06-28 00:21:33,066 - INFO - case_info[LogHandle.py line:73] - 实际结果：10001
+2019-06-28 00:21:33,067 - INFO - test_api[TestApi.py line:63] - ====== 测试结束 ======

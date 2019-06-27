@@ -1,0 +1,71 @@
+
+开发环境：
+    python 3.7
+    pip install xrld
+    pip install xlutils
+    pip install ddt
+    pip install requests
+
+
+项目说明:
+    本项目实现的是一个接口自动化, 以excel表格的数据为驱动，运用了 request + unittest + excel + ddt
+
+实现功能:
+    封装requests请求方法
+    在excel填写接口请求参数
+    运行完后，，结果写入新excel
+    用unittest+ddt数据驱动模式执行
+    HTMLTestRunner生成可视化的html报告
+    封装smtplib发邮件
+    日志功能
+
+已知可扩展的地方：
+    运用jenkins持续集成
+    目前每次只能跑一个excel，需要手动修改配置文件， 可考虑循环列表方式
+    可封装数据库相关操作
+    请求超时监控
+    失败的case重新运行
+    更多可参考 大佬的框架: https://testerhome.com/topics/3455
+
+运行说明：
+    如果要用到发邮件功能， 要去配置开启 并配置自己的账户信息
+
+
+项目目录结果
+├─bin
+│      main.py        # 项目入口，启动文件
+│      __init__.py
+│
+├─common                # 公共部分目录 提供工具用
+│      DataCenter.py    # 数据中心， 负责参数处理 将excel中的字段转化为输入参数
+│      ExcelHandle.py    # 封装了excel的读写
+│      FileHandle.py     #  获取某个文件夹 最近修改的文件
+│      HTMLTestRunner.py    #  生成html报告用的 网上现成下载 拷贝过来
+│      LogHandle.py    # 封装日志操作
+│      MailHandle.py   # 封装邮件操作
+│      RequestHandle.py  # 封装request请求
+│      __init__.py
+│
+│
+├─conf
+│      settings.py   # 配置文件
+│      __init__.py
+│
+│
+├─data
+│      template.xls    #  数据来源
+│      template_new.xls   # 测试结果写入的地方
+│      __init__.py
+│
+├─log
+│      template.log    # 运行日志
+│      __init__.py
+│
+├─reports
+│      2019-06-28_00-21-32-result.html   # 测试报告
+│      __init__.py
+│
+└─testcases
+       TestApi.py     # 测试case  主逻辑集中的地方
+       __init__.py
+
